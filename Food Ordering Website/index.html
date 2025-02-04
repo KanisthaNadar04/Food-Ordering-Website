@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 2: LANDING PAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-mainlogo">
+            <img class="navbar-n" src="https://vectorified.com/images/non-veg-icon-22.png" alt="logo">
+        </div>
+        <div class="navbar-mainhead">
+            <h1>50% off on your first order with YUMMY JUICY CHICKENS</h1>
+        </div>
+    </nav>
+
+    <div class="main-outer">
+        <nav class="secnav">
+            <div class="titlemsa">
+                <h1>ORDER NOW!! FOR DELIVERY CALL- 0251-636-999</h1>
+            </div>
+            <div class="linnk">
+                <a href="#" class="cart-link" onclick="openCart()">View Cart</a>
+                <a href="#" class="order-link" onclick="promptOrderDetails()">Order Now</a>
+            </div>
+        </nav>
+
+        <div class="image-container">
+            <img src="https://i.pinimg.com/originals/46/4a/da/464ada2ba62cf6482b7c052ccbb64363.jpg" alt="Full Width Picture">
+            <div class="text-overlay">
+                <p>WELCOME TO</p>
+                <p>YUMMY JUICY CHICKENS</p>
+            </div>
+        </div>
+
+        <h1 class="titlemsa">To Add....</h1>
+
+        <div class="grid" id="griid">
+            <div class="box">
+                <a href="#" onclick="addToCart('Yummy Juicy Spcl chi burger', 350)">
+                    <img class="crs" src="./spcl chicken juicy bug.jpg" alt="Yummy Juicy Spcl chi burger">
+                    <div class="tover">Yummy Juicy Spcl chi burger<br>₹350</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Cheesy Burger', 300)">
+                    <img class="crs" src="./chi cheesy bug.jpg" alt="Chi Cheesy Burger">
+                    <div class="tover">Chi Cheesy Burger<br>₹300</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Ham Burger', 250)">
+                    <img class="crs" src="./ham bug.jpeg" alt="Ham Burger">
+                    <div class="tover">Ham Burger<br>₹250</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Reg Burger', 200)">
+                    <img class="crs" src="./chi reg bug.jpeg" alt="Chi Reg Burger">
+                    <div class="tover">Chi Reg Burger<br>₹200</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Mayo Burger', 230)">
+                    <img class="crs" src="./chi mayo bug.jpg" alt="Chi Mayo Burger">
+                    <div class="tover">Chi Mayo Burger<br>₹230</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Spicy Pizza', 500)">
+                    <img class="crs" src="./chi pizza.jpeg" alt="Chi Spicy Pizza">
+                    <div class="tover">Chi Spicy Pizza<br>₹500</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Wings Bucket', 550)">
+                    <img class="crs" src="./chi wings.jpeg" alt="Chi Wings Bucket">
+                    <div class="tover">Chi Wings Bucket<br>₹550</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Popcorn', 210)">
+                    <img class="crs" src="./KFC-Popcorn-Chicken-Recipe.jpg" alt="Chi Popcorn">
+                    <div class="tover">Chi Popcorn<br>₹210</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Korean Chi Spicy', 300)">
+                    <img class="crs" src="./korean-spicy-chicken.jpg" alt="Korean Chi Spicy">
+                    <div class="tover">Korean Chi Spicy<br>₹300</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Crispy', 200)">
+                    <img class="crs" src="./chi crispy.jpg" alt="Chi Crispy">
+                    <div class="tover">Chi Crispy<br>₹200</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Lollipop', 250)">
+                    <img class="crs" src="./chi lollipop.jpeg" alt="Chi Lollipop">
+                    <div class="tover">Chi Lollipop<br>₹250</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="#" onclick="addToCart('Chi Chilly', 210)">
+                    <img class="crs" src="./4cc2758bb1354d4e8b1e018105767fed.jpg" alt="Chi Chilly">
+                    <div class="tover">Chi Chilly<br>₹210</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="click-more" onclick="expandGrid()">Click To add more</div>
+
+        <div class="contact">
+            <div class="pt1">
+                <form id="orderForm" style="display: none;">
+                    <h1>To Order:</h1>
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" id="name" name="name" placeholder="Your Name Here" required></td>
+                        </tr>
+                        <tr>
+                            <td>Full Address:</td>
+                            <td><input type="text" id="address" name="address" placeholder="Your Address Here" required></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number:</td>
+                            <td><input type="text" id="phone" name="phone" placeholder="Your Phone Number Here" required></td>
+                        </tr>
+                    </table>
+                    <div class="boton">
+                        <button class="button-boton" type="button" onclick="submitOrder()">Submit Order</button>
+                    </div>
+                    <h2>AT YOUR DOORSTEP WITHIN 45 MINS OF YOUR ORDER!!!</h2>
+                </form>
+            </div>
+            <div class="pt2">
+                <img src="https://www.licious.in/blog/wp-content/uploads/2023/02/shutterstock_1199926645.jpg" alt="Delicious Chicken">
+            </div>
+        </div>
+
+        <marquee>2024@ Kanistha Nadar ALL Rights Reserved</marquee>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button onclick="orderNow()">Proceed to Order</button>
+        </div>
+
+        <!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal"></div>
+        <button onclick="orderNow()">Proceed to Order</button>
+    </div>
+</div>
+    </div>
+</body>
+
+</html>
